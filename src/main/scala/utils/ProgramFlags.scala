@@ -39,7 +39,7 @@ object ProgramFlags
 	final val doIndelRealignment = false
 	final val doPrintReads = true
 	// 
-	final val distFileSystem = "hdfs"
+	final val distFileSystem = "local"//"hdfs" //for_local
 	
 	override def toString() = 
 	{
