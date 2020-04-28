@@ -86,7 +86,7 @@ def executeHadoop(part, ni, em, extra_param):
 		libsStr = libsStr + jarfile + ','
 	libsStr = libsStr[0:-1]
 
-	cmdStr = "$SPARK_HOME/bin/spark-submit " + \
+	cmdStr = "/home/tahmad/tahmad/spark/bin/spark-submit " + \
 	"--jars " + libsStr + " " + \
 	"--class \"DNASeqAnalyzer\" --master " + master + " --deploy-mode " + deploy_mode + " " + \
 	"--files " + configFilePath + "," + dictPath + "," + toolsStr + " " + \
@@ -106,7 +106,7 @@ def executeLocal(part, extra_param):
 	if not os.path.exists(tmpFolder):
 		os.makedirs(tmpFolder)
 			
-	cmdStr = "$SPARK_HOME/bin/spark-submit " + \
+	cmdStr = "/home/tahmad/tahmad/spark/bin/spark-submit " + \
 	"--jars lib/htsjdk-1.143.jar " + \
 	"--class \"DNASeqAnalyzer\" --master local[" + numInstances + "] --driver-memory " + driver_mem + " " + exeName + " " + \
 	configFilePath + " " + str(part) + extra_param
@@ -153,7 +153,7 @@ def executeChunker():
 	doc = minidom.parse(chunkerConfigFilePath)
 	driver_mem_chunker = doc.getElementsByTagName("driverMemGB")[0].firstChild.data + "g"
 	
-	cmdStr = "$SPARK_HOME/bin/spark-submit " + \
+	cmdStr = "/home/tahmad/tahmad/spark/bin/spark-submit " + \
 	"--class \"hmushtaq.fastqchunker.Chunker\" --master local[*] --driver-memory " + driver_mem_chunker + " " + chunkerExeName + " " + chunkerConfigFilePath
 	
 	print cmdStr
