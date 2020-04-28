@@ -94,7 +94,7 @@ public class Configuration implements Serializable
 			gatkOpts = document.getElementsByTagName("gatkOpts").item(0).getTextContent();
 			tmpFolder = correctFolderName(document.getElementsByTagName("tmpFolder").item(0).getTextContent());
 			sfFolder = correctFolderName(document.getElementsByTagName("sfFolder").item(0).getTextContent());
-			hadoopInstall = correctFolderName(document.getElementsByTagName("hadoopInstall").item(0).getTextContent());
+			//for_local//hadoopInstall = correctFolderName(document.getElementsByTagName("hadoopInstall").item(0).getTextContent());
 			ignoreList = document.getElementsByTagName("ignoreList").item(0).getTextContent();
 			//////////////////////////////////////////////////////////////////
 			ignoreListSet = new HashSet<String>();
