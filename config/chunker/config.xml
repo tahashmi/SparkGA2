@@ -1,12 +1,13 @@
 <configuration>
-	<fastq1Path>data/SRR062634_1.filt.fastq.gz</fastq1Path>
-	<fastq2Path>data/SRR062634_2.filt.fastq.gz</fastq2Path>
-	<outputFolder>chunks</outputFolder> 
-	<compLevel>4</compLevel>
-	<chunkSizeMB>60</chunkSizeMB>
-	<blockSizeMB>4</blockSizeMB>
-	<driverMemGB>4</driverMemGB>
-	<numThreads>4</numThreads>
-	<!-- interleave field is ignored obviously for a single ended input -->
-	<interleave>true</interleave> 
+        <fastq1Path>/home/tahmad/mcx/bio_data/ERR001268_1.filt.fastq</fastq1Path>
+        <!-- fastq2Path should be left empty (<fastq2Path></fastq2Path>) for a single ended input -->
+        <fastq2Path>/home/tahmad/mcx/bio_data/ERR001268_2.filt.fastq</fastq2Path>
+        <outputFolder>local:chunks</outputFolder>
+        <compLevel>4</compLevel>
+        <chunkSizeMB>60</chunkSizeMB>
+        <blockSizeMB>8</blockSizeMB>
+        <driverMemGB>8</driverMemGB>
+        <numThreads>16</numThreads>
+        <!-- interleave field is ignored obviously for a single ended input -->
+        <interleave>true</interleave>
 </configuration>
