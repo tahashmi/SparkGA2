@@ -4,7 +4,7 @@
 	<snpPath>/home/tahmad/mcx/bio_data/dbsnp_138.hg19.vcf</snpPath>
 	<indelPath>/home/tahmad/mcx/bio_data/1000G_phase1.indels.hg19.sites.vcf</indelPath>
 	<exomePath></exomePath>
-	<inputFolder>config/chunkerConfig/example.xml:128:chunks</inputFolder>
+	<inputFolder>config/chunker/config.xml:128:chunks</inputFolder>
 	<outputFolder>/home/tahmad/tahmad/output</outputFolder> 
 	<toolsFolder>/home/tahmad/tahmad/tools</toolsFolder>
 	<tmpFolder>./</tmpFolder>
@@ -51,6 +51,6 @@
 	<standEC>0</standEC>
 	<standCC>0</standCC>
 	<useKnownIndels>false</useKnownIndels>
-        <chunkerConfigFilePath>config/chunkerConfig/example.xml</chunkerConfigFilePath>
+        <chunkerConfigFilePath>config/chunker/config.xml</chunkerConfigFilePath>
 	<chunkerGroupSize>256</chunkerGroupSize>
 </configuration>
